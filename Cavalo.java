@@ -1,44 +1,25 @@
-package POO;
+package Polimofirmo;
 
-public class Cavalo extends Animal {
-
-			private String deslocamento;
-			private String raca;
-
-			public Cavalo (String nome, int idade, String origem, String som, String deslocamento, String raca) {
-				super(nome, idade, origem, som);
-				this.deslocamento = deslocamento;
-				this.raca = raca;
-			} 
-			
-			public String getDeslocamento() {
-				return deslocamento;
-			}
-
-			public void setDeslocamento(String deslocamento) {
-				this.deslocamento = deslocamento;
-			}
-			
-			public String getRaca() {
-				return raca;
-			}
-
-
-
-			public void setRaca(String raca) {
-				this.raca = raca;
-			}
-
-
-
-			public void imprimirCav(){
-				System.out.println("\nNome do animal: " + getNome() + "\nIdade: " + getIdade() + "\nOrigem do animal: " + getOrigem() +
-				"\nEmite som?: " + getSom() + "\nDeslocamento: " + deslocamento + "\nRaça: " + raca);
-			}
-			
-		
-		
-		
-		
-
+public class Cavalo extends Animal{
+	
+	
+	public Cavalo(String n, int idade) {
+		super(n,idade);		
 	}
+	
+	public void CaveloCorrer() {
+		System.out.println("\nO "+getNome()+" vai correr !");
+		System.out.println("\nPocotó, pocotó, ...");
+	}
+
+	@Override
+	public void EmitirSom(String som) {
+		System.out.println("\nO "+getNome()+" vai relinchar");	
+		System.out.println("\niiirrrrí\niiirrrrí\niiirrrrí");
+	}
+	
+	@Override
+	public void imprimirInfo(String nome, int idade) {
+		System.out.println("\nO cavalo "+getNome()+" tem "+getIdade()+" anos.");
+	}
+}

@@ -1,18 +1,49 @@
-package POO;
+package Polimofirmo;
 
-public class TesteAnimal {
+import java.util.Scanner;
+
+public class AnimalTeste {
 
 	public static void main(String[] args) {
-		Cachorro dog = new Cachorro("Hades", 13, "Criadoro da Vó Malu", "Sim", "Anda e corre", "Bull Terrie");
-		Cavalo horse = new Cavalo ("Black", 23, "Fazenda do Zé Leôncio", "Sim", "Cavalga", "Cavalo Pantaneiro");	
-		Preguica sloth = new Preguica("Cammy", 5, "Pantanal", "Sim", "Sobe árvores");
 		
-	System.out.println("\t\t\tInformações dos animais: ");
-	dog.imprimirCa();
-	horse.imprimirCav();
-	sloth.imprimirPre();
-
-
+		int op=0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		Cavalo horse = new Cavalo(null,null);
+		Cachorro dog = new Cachorro(null,null);
+		Preguica p = new Preguica(null,null);
+		
+		
+		
+	System.out.println("\nQual animal você deseja?");
+	System.out.println("\n1. Cavalo");
+	System.out.println("\n2. Cachorro");
+	System.out.println("\n3. Preguiça");
+	op = sc.nextInt();
+	
+		switch(op) {
+		case 1: 
+		horse.imprimirInfo(nome, idade);
+		horse.CaveloCorrer();
+		horse.EmitirSom(null);
+		break;
+		case 2: 
+		dog.imprimirInfo(null, op);
+		dog.CachorroCorrer();
+		dog.EmitirSom(null);
+		break;
+		case 3: 
+		p.imprimirInfo(null, op);
+		p.PreguicaAnda();
+		p.EmitirSom(null);
+		break;
+		default:System.out.println("Opção Inválida.");
+		}
+		
+		
 	}
-}
 
+}

@@ -1,40 +1,24 @@
-package POO;
+package Polimofirmo;
 
-public class Preguica extends Animal {
-	
-		private String deslocamento;
-		
-		public Preguica (String nome, int idade, String origem, String som, String deslocamento) {
-			
-			super(nome, idade, origem, som);
-			this.deslocamento = deslocamento;
-		}
+public class Preguica extends Animal{
 
-		public String getDeslocamento() {
-			return deslocamento;
-		}
-
-
-		public void setDeslocamento(String deslocamento) {
-			this.deslocamento = deslocamento;
-		}
-		
-		
-		public void imprimirPre() {
-			System.out.println("\nNome do animal: " + getNome() + "\nIdade: " + getIdade() + "\nOrigem do animal: " + getOrigem() +
-			"\nEmite som?: " + getSom() + "\nDeslocamento: " + deslocamento);
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-			
-		
-		
-		
-
+	public Preguica(String n, int idade) {
+		super(n,idade);		
 	}
+	
+	public void PreguicaAnda() {
+		System.out.println("\nA "+getNome()+" esta subindo na árvore devagarzinho...");
+	}
+	
+	@Override
+	public void EmitirSom(String som) {
+		System.out.println("\nA "+getNome()+" vai emitir seu som preguiçoso");	
+		System.out.println("\nAAAAAAAH\nAAAH\nAAAAAH");
+	}
+	
+	@Override
+	public void imprimirInfo(String nome, int idade) {
+		System.out.println("\nA preguiça "+getNome()+" tem "+getIdade()+" anos.");
+	}
+	
+}

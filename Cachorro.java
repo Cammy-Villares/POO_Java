@@ -1,48 +1,35 @@
-package POO;
+package Polimofirmo;
 
 public class Cachorro extends Animal {
 	
-		private String deslocamento;
-		private String raca;	
+	private String deveCorrer;
+	
+	public Cachorro (String nome, int idade, String emitirSom, String deveCorrer) {
+		super (nome,idade);
 		
-		public Cachorro(String nome, int idade, String origem, String som, String deslocamento, String raca) {
-			super(nome, idade, origem, som);
-			this.deslocamento = deslocamento;
-			this.raca = raca;
-		}
-
-		public String getDeslocamento() {
-			return deslocamento;
-		}
-
-		public void setDeslocamento(String deslocamento) {
-			this.deslocamento = deslocamento;
-		}
-		
-		public String getRaca() {
-			return raca;
-		}
-
-
-
-		public void setRaca(String raca) {
-			this.raca = raca;
-		}
-
-
-
-		public void imprimirCa(){
-			System.out.println("\nNome do animal: " + getNome() + "\nIdade: " + getIdade() + "\nOrigem do animal: " + getOrigem() +
-			"\nEmite som?: " + getSom() + "\nDeslocamento: " + deslocamento + "\nRaça: " + raca);
-		}
-		
-		
-		 
-		
-		
-		
-		
-		
-		
-
+		this.deveCorrer = deveCorrer;	
 	}
+
+	public String getDeveCorrer() {
+		return deveCorrer;
+	}
+
+	public void setDeveCorrer(String deveCorrer) {
+		this.deveCorrer = deveCorrer;
+	}
+	
+	public void imprimirInfo() {
+        System.out.println("\n Nome do Cachorro: "+getNome()+"\nIdade: "+getIdade()+
+                "\n O que ele  faz?  "+deveCorrer);
+
+        }
+	
+	public void emitirLatido() {
+        System.out.println("\n Au-Au-Au");
+}
+        public void correDoguinho() {
+        System.out.println("\n Cachorro correndo atrás do motoqueiro");
+        }
+
+
+}

@@ -1,20 +1,19 @@
-package POO;
+package Polimofirmo;
 
-public class Animal {
-	
+public abstract class Animal {
+
 	private String nome;
 	private int idade;
-	private String origem;
-	private String som;
-
-	public Animal(String nome, int idade, String origem, String som){
-		
-		this.nome = nome;
+	
+	
+	public Animal(String n, int idade) {
+		this.setNome(n);
 		this.idade = idade;
-		this.origem = origem;
-		this.som = som;
 	}
 
+	abstract public void EmitirSom(String som);
+	abstract public void imprimirInfo(String nome, int idade);
+	
 	public String getNome() {
 		return nome;
 	}
@@ -30,21 +29,4 @@ public class Animal {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-
-	public String getOrigem() {
-		return origem;
-	}
-
-	public void setOrigem(String origem) {
-		this.origem = origem;
-	}
-
-	public String getSom() {
-		return som;
-	}
-
-	public void setSom(String som) {
-		this.som = som;
-	}
-
 }
